@@ -1,13 +1,13 @@
 "use client"
 
-import { useToast } from "../hooks/use-toast";
+import { useToast } from "../../hooks/use-toast";
 import { ToastProvider, ToastViewport, Toast, ToastTitle, ToastDescription, ToastClose, ToastAction } from "./toast";
 
-// Fixing implicit 'any' types by defining the type for the toast object
+// Updating the ToastObject type to match ToasterToast
 interface ToastObject {
   id: string;
-  title?: string;
-  description?: string;
+  title?: React.ReactNode;
+  description?: React.ReactNode;
   action?: React.ReactNode;
   [key: string]: any;
 }
