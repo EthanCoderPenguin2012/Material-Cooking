@@ -1,7 +1,6 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -21,7 +20,6 @@ const nextConfig: NextConfig = {
   experimental: {
     // Add experimental features here if needed
   },
-  srcDir: './scr/app', // Set the custom source directory
 };
 
 export default nextConfig;
