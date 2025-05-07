@@ -33,27 +33,12 @@ const generateRecipeImageFlow = ai.defineFlow(
     outputSchema: GenerateRecipeImageOutputSchema,
   },
   async input => {
-    const {media} = await ai.generate({
-      // IMPORTANT: ONLY the googleai/gemini-2.0-flash-exp model is able to generate images. You MUST use exactly this model to generate images.
-      model: 'googleai/gemini-2.0-flash-exp',
+    const { media } = await ai.generate(`Generate an image of ${input.recipeName}`);
 
-      // simple prompt
-      prompt: `Generate an image of ${input.recipeName}`,
+    if (!media?.url) {
+      throw new Error('Failed to generate image. Media URL is undefined.');
+    }
 
-      config: {
-        responseModalities: ['TEXT', 'IMAGE'], // MUST provide both TEXT and IMAGE, IMAGE only won't work
-      },
-    });
-
-    return {imageUrl: media.url!};
+    return { imageUrl: media.url };
   }
 );
-
-{
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./scr/*"]
-    }
-  }
-}
