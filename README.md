@@ -20,7 +20,7 @@ Material Cooking is a web application that uses AI to generate delicious recipes
 
 ## Folder Structure
 
-.
+``` Folder Structure
 ├── scr/
 │   ├── ai/                # AI-related logic and flows
 │   ├── app/               # Next.js app directory
@@ -34,7 +34,7 @@ Material Cooking is a web application that uses AI to generate delicious recipes
 ├── [tailwind.config.ts](http://_vscodecontentref_/3)     # Tailwind CSS configuration
 ├── [next.config.ts](http://_vscodecontentref_/4)         # Next.js configuration
 ├── [package.json](http://_vscodecontentref_/5)           # Project metadata and scripts
-
+```
 ## Installation
 
 1. Clone the repository:
