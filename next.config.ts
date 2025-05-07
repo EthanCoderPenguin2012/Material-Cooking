@@ -18,6 +18,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    // Add experimental features here if needed
+  },
+  srcDir: './scr/app', // Set the custom source directory
 };
 
 export default nextConfig;
